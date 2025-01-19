@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Web Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Optional: Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, rgba(78, 115, 223, 0.85), rgba(28, 200, 138, 0.85)), url('https://via.placeholder.com/1500x800'); /* Example image */
+            color: white;
+            padding: 100px 0;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 600;
+            font-size: 3.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 50px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+        }
+
+        .hero-section .btn:hover {
+            background-color: #28a745;
+            transform: scale(1.1);
+        }
+
+        /* Card Section */
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #4e73df;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Alert Section */
+        .alert-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .alert {
+            border-radius: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Form Section */
+        .form-control:focus {
+            border-color: #4e73df;
+            box-shadow: 0 0 5px rgba(72, 126, 250, 0.5);
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        /* Modal Section */
+        .modal-header {
+            background-color: #4e73df;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .modal-footer {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        /* Buttons and Inputs */
+        .btn-primary {
+            background-color: #4e73df;
+            border-color: #4e73df;
+        }
+
+        .btn-primary:hover {
+            background-color: #1cc88a;
+            border-color: #1cc88a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to My Bootstrap Page</h1>
+            <p class="lead">Explore the power of Bootstrap components with a sleek and modern design!</p>
+            <a href="#card-section" class="btn btn-light btn-lg">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Card Section -->
+    <section id="card-section" class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/th.jpeg" class="card-img-top rounded" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">The Boy Who Lived</h5>
+                        <p class="card-text">Follow the journey of Harry Potter as he discovers his true destiny at Hogwarts School of Witchcraft and Wizardry.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/th (1).jpeg" class="card-img-top rounded" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">The Dark Lord's Return</h5>
+                        <p class="card-text">Join Harry and his friends as they fight against the forces of dark magic led by Lord Voldemort.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="img/th (2).jpeg" class="card-img-top rounded" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">The Battle of Hogwarts</h5>
+                        <p class="card-text">The final battle between the forces of good and evil takes place at Hogwarts. Will Harry prevail?</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Section -->
+    <section class="container py-5">
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="bi bi-check-circle alert-icon"></i>
+            <div>This is a success alert—check it out!</div>
+        </div>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-triangle alert-icon"></i>
+            <div>This is a warning alert—check it out!</div>
+        </div>
+    </section>
+
+    <!-- Button Section -->
+    <section class="container py-5 text-center">
+        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Open Modal
+        </button>
+    </section>
+
+    <!-- Modal Section -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This is a simple modal example to demonstrate Bootstrap modals.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Sign Up</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </section>
+
+    <!-- Bootstrap JS (required for components like Modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
